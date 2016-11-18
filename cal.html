@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator1</title>
+	<style type="text/css">
+		html body {
+			background: black;
+		}
+		h1 {
+			font-size: 40px;
+			color: white;
+			text-align: center;
+		}
+		input {
+			text-align: right;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+		#output {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#calKeys {
+			background: gray;
+			width: 300px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 20px;
+			padding-bottom: 30px;
+			border-bottom-right-radius: 1.5em;
+			border-bottom-left-radius: 1.5em;
+		}
+		#main {
+			width: 300px;
+			height: 75px;
+			font-size: 30px;
+			border-top-right-radius: 1.5em;
+			border-top-left-radius: 1.5em;
+		}
+
+		.keyStyle {
+			background: #4295f4;
+			font-size: 30px;
+			margin: 5px;
+			width: 2.6vw;
+			height: 2.6vw;
+		}
+		.big {
+			background: #f44242;
+		}
+	</style>
+</head>
+<body>
+	<h1>Simple Calculator</h1>
+	<br / >
+	<hr />
+	<form name="frm">
+		<div id="output">
+			<input type="text" placeholder="0" name="calOutput" id="main">
+		</div>
+		<div id="calKeys">
+			<input type="button" name="AC" value="AC" class="keyStyle big" onclick="allClear()">
+			<input type="button" name="C" value="%" class="keyStyle" onclick="mod()">
+			<input type="button" name="/" value="/" class="keyStyle" onclick="divide()">
+			<input type="button" name="*" value="*" class="keyStyle" onclick="multiply()">
+			<br />
+			<input type="button" name="9" value="9" class="keyStyle" onclick="fun9()">
+			<input type="button" name="8" value="8" class="keyStyle" onclick="fun8()">
+			<input type="button" name="7" value="7" class="keyStyle" onclick="fun7()">
+			<input type="button" name="+" value="+" class="keyStyle" onclick="plus()">
+			<br />
+			<input type="button" name="6" value="6" class="keyStyle" onclick="fun6()">
+			<input type="button" name="5" value="5" class="keyStyle" onclick="fun5()">
+			<input type="button" name="4" value="4" class="keyStyle" onclick="fun4()">
+			<input type="button" name="-" value="-" class="keyStyle" onclick="minus()">
+			<br />
+			<input type="button" name="6" value="3" class="keyStyle" onclick="fun3()">
+			<input type="button" name="5" value="2" class="keyStyle" onclick="fun2()">
+			<input type="button" name="4" value="1" class="keyStyle" onclick="fun1()">
+			<input type="button" name="-" value="." class="keyStyle" onclick="dot()">
+			<br />
+			<input type="button" name="0" value="0" class="keyStyle" onclick="fun0()">
+			<input type="button" name="=" value="=" class="keyStyle" onclick="equal()">
+		</div>
+	</form>
+
+	<script>
+		function fun1() {document.frm.calOutput.value += "1";}
+		function fun2() {document.frm.calOutput.value += "2";}
+		function fun3() {document.frm.calOutput.value += "3";}
+		function fun4() {document.frm.calOutput.value += "4";}
+		function fun5() {document.frm.calOutput.value += "5";}
+		function fun6() {document.frm.calOutput.value += "6";}
+		function fun7() {document.frm.calOutput.value += "7";}
+		function fun8() {document.frm.calOutput.value += "8";}
+		function fun9() {document.frm.calOutput.value += "9";}
+		function fun0() {document.frm.calOutput.value += "0";}
+		function divide() {document.frm.calOutput.value += "/";}
+		function multiply() {document.frm.calOutput.value += "*";}
+		function plus() {document.frm.calOutput.value += "+";}
+		function minus() {document.frm.calOutput.value += "-";}
+		function dot() {document.frm.calOutput.value += ".";}
+		function fun9() {document.frm.calOutput.value += "9";}
+		function equal() {
+			var result = eval(document.frm.calOutput.value);
+			document.frm.calOutput.value = result;
+		}
+		function mod() {
+			document.frm.calOutput.value += "%";
+		}
+		function allClear() {
+			document.frm.calOutput.value = "";
+		}
+	</script>
+</body>
+</html>
