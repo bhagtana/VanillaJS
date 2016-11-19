@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="Todo">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <style>
+    .done {
+      text-decoration: line-through;
+      color:#ccc;
+    }
+  </style>
+</head>
+<body >
+  <div ng-controller="TodoCtrl">
+    <form name="frm" ng-submit="addTodo()">
+      <input type="text" name="newTodo" ng-model="newTodo" required>
+      <button >Add</button>
+    </form>
+    <button ng-click="clearTodo()">Delete Todo</button>
+    <ul>
+      <li ng-repeat="todo in todos">
+        <input type="checkbox" ng-model="todo.done">
+        <span ng-class="{'done': todo.done}">{{todo.title}}</span>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

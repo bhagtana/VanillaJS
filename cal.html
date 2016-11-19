@@ -87,6 +87,7 @@
 	</form>
 
 	<script>
+		function fun0() {document.frm.calOutput.value += "0";}
 		function fun1() {document.frm.calOutput.value += "1";}
 		function fun2() {document.frm.calOutput.value += "2";}
 		function fun3() {document.frm.calOutput.value += "3";}
@@ -96,13 +97,11 @@
 		function fun7() {document.frm.calOutput.value += "7";}
 		function fun8() {document.frm.calOutput.value += "8";}
 		function fun9() {document.frm.calOutput.value += "9";}
-		function fun0() {document.frm.calOutput.value += "0";}
 		function divide() {document.frm.calOutput.value += "/";}
 		function multiply() {document.frm.calOutput.value += "*";}
 		function plus() {document.frm.calOutput.value += "+";}
 		function minus() {document.frm.calOutput.value += "-";}
 		function dot() {document.frm.calOutput.value += ".";}
-		function fun9() {document.frm.calOutput.value += "9";}
 		function equal() {
 			var result = eval(document.frm.calOutput.value);
 			document.frm.calOutput.value = result;
