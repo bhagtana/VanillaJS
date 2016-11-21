@@ -13,18 +13,22 @@
   </style>
 </head>
 <body >
-  <div ng-controller="TodoCtrl">
-    <form name="frm" ng-submit="addTodo()">
+  <div ng-controller="TodoCtrl" >
+    <form name="frm"  ng-submit="addTodo()">
       <input type="text" name="newTodo" ng-model="newTodo" required>
       <button >Add</button>
     </form>
-    <button ng-click="clearTodo()">Delete Todo</button>
-    <ul>
-      <li ng-repeat="todo in todos">
-        <input type="checkbox" ng-model="todo.done">
-        <span ng-class="{'done': todo.done}">{{todo.title}}</span>
-      </li>
-    </ul>
+    <div>
+      <button ng-click="clearTodo()">Delete Todo</button>
+    </div>
+    <div>
+      <ul >
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span ng-class="{'done': todo.done}">{{todo.title}}</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
